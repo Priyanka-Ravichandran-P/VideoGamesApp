@@ -1,0 +1,54 @@
+.filters{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px;
+
+}
+
+::ng-deep{
+    .mat-form-field-infix{
+        background-color: #3f51b5;
+    }
+
+    .mat-select-value,
+    .mat-select-arrow,
+    .mat-form-field-hide-placeholder .mat-select-placeholder,
+    .mat-form-field-appearance-legacy .mat-form-field-label{
+        color: #fff !important;
+        opacity: 1;
+    }
+
+    .mat-form-field-infix{
+        border-color: #fff !important;
+        border-top: none;
+        padding-left: 5px !important;
+    }
+
+    .mat-form-field-appearance-legacy .mat-form-field-label{
+        padding-left: 5px;
+    }
+
+    .mat-form-field-appearance-legacy .mat-form-field-underline{
+        background-color: #fff;
+}
+
+.game{
+    cursor: pointer;
+    margin: 10px;
+    // width: 280px;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    &:hover{
+        box-shadow: 4px 3px 11px 6px rgb(200 152 44);
+        transform: translateY(-3px);
+    }
+    &-thumbnail{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+}
+}

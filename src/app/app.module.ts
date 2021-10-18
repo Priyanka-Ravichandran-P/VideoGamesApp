@@ -10,18 +10,21 @@ import { MatSelectModule } from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     GaugeModule,
     MatTabsModule,
     MatIconModule,

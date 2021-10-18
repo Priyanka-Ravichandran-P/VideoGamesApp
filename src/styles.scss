@@ -3,7 +3,7 @@
 body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: #151515;
-    padding-top: 60px;
+    padding-top: 20px;
     height: 100%;
 }
  body * {
@@ -12,11 +12,26 @@ body {
      padding: 0;
      box-sizing: border-box;
  }
-
- .bg-image{
-     background-image: url('../src/assets/logo.jpg');
+ .row > *{
+     padding-right: 0;
+ }
+ .img-circle{
      width: 50px;
      height: 45px;
- border-radius: 100%;
- object-fit: cover;
+    border-radius: 100%;
+    object-fit: cover;
+ }
+
+ .search {
+    font-weight: 550;
+    cursor: pointer;
+    &:hover{
+        background-color:white;
+        color:#0d6efd;
+        transition-duration: 0.5s;
+    }
+ }
+
+ .bg-light{
+    background-color: cornflowerblue;
  }

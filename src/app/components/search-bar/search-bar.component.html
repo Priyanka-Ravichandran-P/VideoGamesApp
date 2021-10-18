@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">VGDB</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+      <form class="row col-6" #form=ngForm (ngSubmit)="onSubmit(form)">
+        <span class="col-auto"><img src="../../assets/logo.jpg" class="img-circle img-responsive" routerLink="/" alt="Logo"></span>
+        <div class="col-9">
+          <input class="form-control" type="text" name="search" ngModel id="search" placeholder="Search 50,000+ games">
+        </div>
+        
+        <div class="col-1">
+          <button type="submit" class="btn btn-primary mb-3 search">Search</button>
+        </div>
+        
+      </form>
+    <!-- </div> -->
+  </div>
+</nav>
