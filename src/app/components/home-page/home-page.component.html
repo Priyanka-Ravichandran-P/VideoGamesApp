@@ -1,4 +1,5 @@
-<div class="filters"><mat-form-field>
+<div class="filters">
+  <mat-form-field>
     <mat-label>Sort</mat-label>
     <mat-select panelClass="sort-select" [(ngModel)]="sort">
       <mat-option value="name">Name</mat-option>
@@ -12,11 +13,23 @@
   </mat-form-field>
 </div>
 
-
-<div class="card game" style="width: 18rem;">
-    <img class="card-img-top" src="../../../assets/pubg.jpg" alt="thumbnail">
-    <div class="card-body">
-      <h2 class="card-title">PUBG</h2>
-      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+<div class="row games">
+  <ng-container *ngFor="let game of games">
+    <div class="card game" style="width: 17rem;">
+      <div class="game-thumb-container">
+      <img *ngIf="game.background_image" src="{{game.background_image}}"  alt="thumbnail"
+      class="game-thumbnail">
+      <p *ngIf="!game.background_image">No Image</p>
+     
+      <div class="game-description">
+        <p class="game-name">{{ game.name }}</p>
+      <div class="game-platforms">
+        <img *ngFor="let gamePlatform of game.parent_platforms"
+           src="../../../assets/images/platformImages/{{gamePlatform.platform.slug}}.svg"
+          alt="{{gamePlatform.platform.slug}}"> 
+      </div>
+      </div>
     </div>
-  </div>
+    </div>
+  </ng-container>
+</div>

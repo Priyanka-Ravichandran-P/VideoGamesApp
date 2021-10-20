@@ -24,7 +24,7 @@ interface Genre {
     name: string;
 }
 interface Parentplatform {
-    platform: { name: string }
+    platform: { name: string , slug: string}
 }
 interface Publishers {
     name: string;
