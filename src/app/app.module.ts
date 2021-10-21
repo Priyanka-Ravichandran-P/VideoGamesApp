@@ -13,12 +13,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { HttpHeaderInterceptor } from './interceptors/http-header-interceptor';
+import { DetailsComponent } from './details/details.component';
+import { GameTabsComponent } from './game-tabs/game-tabs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    HomePageComponent
+    HomePageComponent,
+    DetailsComponent,
+    GameTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,7 @@ import { HttpHeaderInterceptor } from './interceptors/http-header-interceptor';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    GaugeModule,
+    GaugeModule.forRoot(),
     MatTabsModule,
     MatIconModule,
     MatFormFieldModule,
@@ -42,7 +46,7 @@ import { HttpHeaderInterceptor } from './interceptors/http-header-interceptor';
       provide: HTTP_INTERCEPTORS,
       useClass: HttpHeaderInterceptor,
       multi: true
-    },
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -32,16 +32,17 @@
         background-color: #fff;
 }
 
-.game{
-    width: 280px;
-    margin: 10px;
-    height: 330px;
+.card{
+    width: 300px;
+    margin: 20px;
+    height: 340px;
     overflow: hidden;
     border-radius: 5px;
     background-color: #202020;
     box-shadow: 4px 3px 8px 0px rgb(200 152 44 / 22%);
     transition-duration: 0.3s;
     cursor: pointer;
+    padding: 0;
   
     &:hover{
         box-shadow: 4px 3px 11px 6px rgb(200 152 44);
@@ -55,36 +56,26 @@
         text-align: center;
       }
     
-      &-thumbnail {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        height: 172px;
+      &-thumbnail {    
+        height: 192px;
       }
       &-description {
         padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 157px;
+        height: 147px;
       }
-    
       &-name {
         color: #fff !important;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 22px;
-        margin-bottom: 20px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
       }
-    
-    &-platforms {
+      &-platforms {
         display: flex;
+        padding: 20px;
       }
-    
+
       &-platform {
         width: 20px;
         margin-right: 10px;
